@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Glory:ital,wght@0,100..800;1,100..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins;
+}
+.logo{
+    font-size: 36px;
+    font-weight: 800;
+    font-family: Poppins;
+    
+}
+a {
+  text-decoration: none !important;
+  
+}
+.hero {
+  height: 90vh;
+  background-image: url(./image1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.title {
+  font-size: 200px;
+  font-family: "Glory", serif;
+  font-weight: 800;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
+.glory {
+  font-family: "Glory", serif;
+}
+.subtitle {
+  font-size: 40px;
+  font-weight: 800;
+}
+.hidden {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.bg-gray{
+    background-color: #D9D9D9;
+
+}
+.bg-blue{
+    background-color: #009DDB;
+}
+.Lora{
+    font-family: "Lora";
+}
+hr{
+    opacity: 1 !important;
+    color: black !important;
+    border: 1px solid black !important;
+}

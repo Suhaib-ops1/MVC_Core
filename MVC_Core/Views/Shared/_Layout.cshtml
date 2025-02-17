@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MVC_Core</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MVC_Core.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand logo" href="#">EcoRide Jordan</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="../Home/home.html">Home</a>
+                    
+                        <a class="nav-link" href="../about/about.html">About us</a>
+                        <a class="nav-link" href="../JoinUs/join.html">Join us</a>
+                        <a class="nav-link" href="../subscribe/subscribe.html">Subscriptions</a>
+                        <a class="nav-link" href="../news/news.html">News</a>
+                        <a class="nav-link" href="#">Help</a>
+                        <a class="nav-link" href="../sign up/signup.html" id="sign">Sign in/Sign up</a>
+                        <a class="nav-link" href="../map/map.html" id="ride" hidden>start Ride</a>
+                        <a class="nav-link" href="../profile/profile.html" id="prof" hidden>profile</a>
+                        <a class="nav-link" href="../Home/home.html" id="logout" onclick="logout()" hidden>log out</a>
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class=" bg-body-tertiary pt-5">
+
+        <div class="container ">
+            <div class="mt-5 mb-3">
+                <a class="pe-2" style="color: black;" aria-current="page" href="#">Home</a>
+                <a class="pe-2" style="color: black;" href="#">About us</a>
+                <a class="pe-2" style="color: black;" href="#">Join us</a>
+                <a class="pe-2" style="color: black;" href="#">Subscriptions</a>
+                <a class="pe-2" style="color: black;" href="#">News</a>
+                <a class="pe-2" style="color: black;" href="#">Help</a>
+                <a class="pe-2" style="color: black;" href="#">Sign in/Sign up</a>
+            </div>
+        </div>
+
+        <div class="container">
+            <hr class="w-100">
+        </div>
+        <div class="d-flex justify-content-around align-items-center">
+            <a class="navbar-brand logo" href="#">EcoRide Jordan</a>
+
+            <!-- Copyright -->
+            <div class="text-center p-3">
+                © 2020 Copyright:
+                <a class="text-body" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+            </div>
+            <!-- Copyright -->
+            <!-- Grid container -->
+            <!-- Section: Social media -->
+            <section>
+                <!-- Facebook -->
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="#!" role="button"
+                   data-mdb-ripple-color="dark"><i class="fab fa-facebook-f"></i></a>
+
+                <!-- Twitter -->
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="#!" role="button"
+                   data-mdb-ripple-color="dark"><i class="fab fa-twitter"></i></a>
+
+                <!-- Google -->
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="#!" role="button"
+                   data-mdb-ripple-color="dark"><i class="fab fa-google"></i></a>
+
+                <!-- Instagram -->
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="#!" role="button"
+                   data-mdb-ripple-color="dark"><i class="fab fa-instagram"></i></a>
+
+                <!-- Linkedin -->
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="#!" role="button"
+                   data-mdb-ripple-color="dark"><i class="fab fa-linkedin"></i></a>
+                <!-- Github -->
+                <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="#!" role="button"
+                   data-mdb-ripple-color="dark"><i class="fab fa-github"></i></a>
+            </section>
+            <!-- Section: Social media -->
+            <!-- Grid container -->
+        </div>
+
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
