@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "ViewBag Example";
+}
+
+<h2>@ViewBag.Message</h2>
+<h1> @ViewBag.Hala</h1>
+
+<ul>
+    @foreach (var number in ViewBag.Numbers)
+    {
+        <li>@number</li>
+    }
+</ul>

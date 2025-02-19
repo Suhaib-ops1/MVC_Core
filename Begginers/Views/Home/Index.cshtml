@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple GET & POST</title>
+
+
+
+    <title>Response Types Example</title>
+</head>
+<body>
+    <h2>Enter Your Name:</h2>
+
+    <form method="post">
+        <input type="text" name="name" required />
+        <button type="submit">Submit</button>
+    </form>
+
+    @if (ViewBag.Message != null)
+    {
+        <h3>@ViewBag.Message</h3>
+    }
+
+
+
+
+    <h2>Different Response Types</h2>
+
+    <a href="/Home/GoToAbout">Go to About Page</a>
+    <br>
+    <a href="/Home/GoToGoogle">Go to Google</a>
+
+
+
+</body>
+</html>

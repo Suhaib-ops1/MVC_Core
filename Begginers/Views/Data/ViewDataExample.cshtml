@@ -1,0 +1,12 @@
+﻿@{
+    ViewData["Title"] = "ViewData Example";
+}
+
+<h2>@ViewData["Message"]</h2>
+
+<ul>
+    @foreach (var number in (int[])ViewData["Numbers"])
+    {
+        <li>@number</li>
+    }
+</ul>
