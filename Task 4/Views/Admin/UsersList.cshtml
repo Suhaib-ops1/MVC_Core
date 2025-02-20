@@ -1,0 +1,27 @@
+﻿@{
+  
+
+    // Dynamically loading users (NO CONTROLLER)
+    var users = new[] {
+        new { Username = "Abdallah", Age = 8, Email = "Abdallah@gmail.com" },
+        new { Username = "Sally", Age = 13, Email = "sullay@gmail.com" },
+        new { Username = "Salah", Age = 12, Email = "salah@gmail.com" }
+    };
+}
+
+<h2>Users List</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr><th>Username</th><th>Age</th><th>Email</th></tr>
+    </thead>
+    <tbody>
+        @foreach (var user in users)
+        {
+            <tr>
+                <td>@user.Username</td>
+                <td>@user.Age</td>
+                <td>@user.Email</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Begginers", "Begginers\Begg
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task 4", "Task 4\Task 4.csproj", "{FB5D07F2-771E-4858-8E20-FDE454C2E9F5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "Calculator\Calculator.csproj", "{ED69A684-DAEA-4F0C-93E2-A66A12030F83}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{FB5D07F2-771E-4858-8E20-FDE454C2E9F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB5D07F2-771E-4858-8E20-FDE454C2E9F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB5D07F2-771E-4858-8E20-FDE454C2E9F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED69A684-DAEA-4F0C-93E2-A66A12030F83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED69A684-DAEA-4F0C-93E2-A66A12030F83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED69A684-DAEA-4F0C-93E2-A66A12030F83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED69A684-DAEA-4F0C-93E2-A66A12030F83}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

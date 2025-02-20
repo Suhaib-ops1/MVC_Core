@@ -11,6 +11,24 @@ namespace Task_4.Controllers
         {
             return View();
         }
+
+        public IActionResult EditProfile()
+        {
+            return View();
+        }
+
+        public IActionResult saveData()
+        {
+
+            string address = Request.Form["Address"];
+            string phone = Request.Form["Phone"];
+
+
+            HttpContext.Session.SetString("Address", address);
+            HttpContext.Session.SetString("Phone", phone);
+            return RedirectToAction("Profile");
+        }
+
         public IActionResult Login()
         {
             return View();
@@ -41,10 +59,30 @@ namespace Task_4.Controllers
         {   
             string Email=Request.Form["Email"];
             string Password= Request.Form["Password"];
+            string Remember = Request.Form["Remember"];
 
             string Stored_email = HttpContext.Session.GetString("Email");
             string Stored_password = HttpContext.Session.GetString("Password");
+
+            if (Password == "123" && Email == "Admin@gmail.com")
+            {
+                HttpContext.Session.SetString("Email", Email);
+                HttpContext.Session.SetString("Password", Password);
+                return RedirectToAction("Index", "Home");
+            }
+
             if (Email == Stored_email && Password == Stored_password) {
+
+                if (Remember != null)
+                {
+                    CookieOptions obj = new CookieOptions();
+                    obj.Expires = DateTime.Now.AddDays(7);
+                    //store
+
+                    Response.Cookies.Append("Email", Email, obj);
+                    Response.Cookies.Append("Password", Password, obj);
+
+                }
 
                 return RedirectToAction("Index" , "Home");
             }
@@ -58,6 +96,21 @@ namespace Task_4.Controllers
             ViewData["Upassword"] = HttpContext.Session.GetString("Password");
             
             return View();
+        }
+
+        public IActionResult Logout()
+        {
+            if (HttpContext.Session.GetString("Email")== "Admin@gmail.com")
+            {
+                HttpContext.Session.Clear();
+                return RedirectToAction("Index", "Home");
+            }
+            string username = HttpContext.Session.GetString("Username");
+            CookieOptions obj = new CookieOptions();
+            obj.Expires = DateTime.Now.AddDays(7);
+            Response.Cookies.Append("Username", username, obj);
+            HttpContext.Session.Clear();
+            return RedirectToAction("Index", "Home");
         }
     }
 }
